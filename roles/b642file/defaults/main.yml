@@ -1,0 +1,9 @@
+---
+# Example:
+#files:
+#- dest: /tmp/name.txt
+#  data: WWFoYWEhIFlvdSBmb3VuZCBtZSEK
+#  owner: link
+#  group: link
+#  mode: '0600'
+files: []

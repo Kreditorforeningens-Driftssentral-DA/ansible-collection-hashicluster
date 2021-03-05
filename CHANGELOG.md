@@ -1,4 +1,9 @@
 # CHANGELOG
+## 0.1.6 (Unreleased)
+#### GENERAL
+  * Fixed link to new namespace in README
+  * Added basic task/role 'b642file' for writing any number of files to disk from base64encoded strings (e.g. certificates)
+
 ## 0.1.5 (2021-03-04)
 #### GENERAL
   * Fixed CRLF -> LF ..

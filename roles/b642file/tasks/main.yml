@@ -1,0 +1,14 @@
+---
+
+- name: INFO | Write file(s) to disk
+  become: true
+  ansible.builtin.copy:
+    dest: "{{item['dest']}}"
+    content: "{{item['data']|b64decode}}"
+    owner: "{{item['owner']|default('root')}}"
+    group: "{{item['group']|default('root')}}"
+    mode: "{{item['mode']|default('0644')}}"
+  delegate_to: localhost
+  loop: "{{files|default([])}}"
+  loop_control:
+    label: "File '{{item['dest']|string}}' changed."

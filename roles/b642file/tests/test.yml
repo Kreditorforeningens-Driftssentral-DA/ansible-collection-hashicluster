@@ -1,0 +1,17 @@
+# Command: ANSIBLE_ROLES_PATH="$PWD/../../." ansible-playbook test.yml
+---
+- hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+  - name: "Include roles"
+    include_role:
+      name: b642file
+    vars:
+      files:
+      - dest: /tmp/name1.txt
+        data: WWFoYWEhIFlvdSBmb3VuZCBtZSEK
+        mode: '0644'
+      - dest: ./name2.txt
+        data: WWFoYWEhIFlvdSBmb3VuZCBtZSEK
+        mode: '0644'
